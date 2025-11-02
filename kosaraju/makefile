@@ -8,13 +8,13 @@ OBJ = $(SRC:.cpp=.o)
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-    $(CXX) $(CXXFLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
-    $(CXX) $(CXXFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) -c $<
 
 run: $(TARGET)
-    ./$(TARGET)
+	./$(TARGET)
 
 clean:
-    rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJ) $(TARGET)
